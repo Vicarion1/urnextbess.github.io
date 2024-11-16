@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>United Rentals / NextEra Remote Site Monitor</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="scripts.js"></script>
+  <link rel="icon" href="urfavicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+</head>
+<body>
+    <header class="header">
+        <h1>United Rentals / NextEra Remote Site Monitor</h1>
+        <label for="deviceSelect">Select a Device:</label>
+        <select id="deviceSelect">
+          <option value="sel751Iframe1">Cedar Springs 1</option>
+          <option value="sel751Iframe2">Cedar Springs 2</option>
+          <option value="sel751Iframe3">Cedar Springs 3</option>
+        </select>
+        <button class="reconnect-button" id="reconnectBtn">Reconnect</button>
+    </header>
+
+
+  <div id="dashboard">
+    <div class="device-container" id="device1Container">
+      <div class="loading" id="loading1">Loading...</div>
+      <iframe id="sel751Iframe1" src="http://ec2-3-19-230-94.us-east-2.compute.amazonaws.com/device/1"></iframe>
+    </div>
+    <div class="device-container" id="device2Container" style="display:none;">
+      <div class="loading" id="loading2">Loading...</div>
+      <iframe id="sel751Iframe2" src="http://ec2-3-19-230-94.us-east-2.compute.amazonaws.com/device/2"></iframe>
+    </div>
+    <div class="device-container" id="device3Container" style="display:none;">
+      <div class="loading" id="loading3">Loading...</div>
+      <iframe id="sel751Iframe3" src="http://ec2-3-19-230-94.us-east-2.compute.amazonaws.com/device/3"></iframe>
+    </div>
+  </div>
+</body>
+</html>

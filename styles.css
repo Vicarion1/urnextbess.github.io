@@ -1,0 +1,114 @@
+/* Define United Rentals brand colors */
+:root {
+    --ur-blue: #015696;
+    --ur-gray: #A1A0A5;
+    --ur-black: #231E1F;
+  }
+  
+  /* Apply brand colors */
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: var(--ur-gray);
+    color: #333;
+    height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .reconnect-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .reconnect-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 150px; /* Fixed height for consistent layout calculations */
+    color: #ffffff;
+    background-color: var(--ur-blue);
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0 20px;
+}
+
+  
+  .device-container {
+    padding: 1px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a soft shadow for depth */
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 150px); /* Adjusts to fill available space minus header and dropdown */
+    display: none; /* Initially hidden; only the selected iframe is shown */
+
+  }
+  
+  
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    visibility: hidden;
+  }
+  
+  #dashboard {
+    position: fixed;
+    top: 150px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    padding-bottom: 20px;
+  }
+  
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--ur-blue);
+    animation: pulse 1.5s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+
+  #deviceSelect {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  #deviceSelect:focus {
+    border-color: var(--ur-blue);
+  }
+  
+  button:focus {
+    outline: 3px solid var(--ur-blue);
+    outline-offset: 3px;
+  }
+
+  
